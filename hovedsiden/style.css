@@ -1,53 +1,76 @@
 body {
-    background-color: deepskyblue;
-    max-width: 100%;
-    margin: auto;
+  background-color: deepskyblue;
 }
 
+main {
+  width: 1400px;
+  left: 50%;
+  transform: translateX(-50%);
+  position:absolute; 
+  text-align: center;
+}
 
 /*------------------------------ CSS for kartet -----------------------------------------------------------*/
-.mapdiv{
-    margin: auto;
-}
-
 .mapdiv path{
-    fill: grey;
-    stroke: white;
-    stroke-width: 1px;
-    transition: fill 0.3s;
+  fill: grey;
+  stroke: white;
+  stroke-width: 1px;
+  transition: fill 0.3s;
 }
 .mapdiv path:hover{
-    fill: blue;
+  fill: red;
 }
 
-/*------------------------------ CSS for tabellene i grid--------------------------------------------------------*/
+#kart{
+  height: 790px;
+  width: 740px;
+}
+
+/*------------------------------ CSS for tabellene i grid--------------------------------------------------*/
 #tabeller{
-    max-width: 1300px; /* Setter bredden på alt i main til mindre enn siden */
-    margin: auto;
-    display: grid; /* Definerer grid */
-    grid-template-columns: repeat(12,1fr); /* Deler radene i 12 like store ruter*/
-    grid-gap: 20px; /* Lager et mellomrom på 20px mellom rutene */
+  max-width: 1000px; /* Setter bredden på alt i main til mindre enn siden */
+  margin: auto;
+  display: grid; /* Definerer grid */
+  grid-template-columns: repeat(12,1fr); /* Deler radene i 12 like store ruter*/
+  grid-gap: 20px; /* Lager et mellomrom på 20px mellom rutene */
 }
 
 table {
-    width:100%;
-  }
-  table, th, td {
-    border: 1px solid white;
-    border-collapse: collapse;
-  }
-  th, td {
-    padding: 15px;
-    text-align: center;
-  }
-  table tr{
-    color: grey;
-    background-color: #fff;
-  }
-  table th {
-    background-color: white;
-    color: black;
-  }
+  width:100%;
+}
+table, th, td {
+  border: 1px solid white;
+  border-collapse: collapse;
+}
+th, td {
+  padding: 15px;
+  text-align: center;
+  font-family:monospace ;
+}
+table tr{
+  color: grey;
+  background-color: #fff;
+}
+table th {
+  background-color: white;
+  color: black;
+}
+
+/*----- Sidebilder ---*/
+#sidenav {
+  width: 200px;
+  position: fixed; /* Virusene flytter ikke på seg når du beveger deg på siden */
+  z-index: 1;
+  bottom: 2px;
+  overflow-x: hidden;
+  padding: 8px 0;
+}
+.sidenavV {
+  left: 3px; /* Skaper avstand mellom bilde og venstre kant av skjermen */
+}
+.sidenavH {
+  right: 3px; /* Skaper avstand mellom bilde og høyre kant av skjermen */
+}
 
 
 
