@@ -345,6 +345,7 @@ image{
 }
 .mapdiv path:hover{
   fill: black;
+  cursor: pointer;
 }
 
 #kart{
