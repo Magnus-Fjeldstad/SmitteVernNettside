@@ -8,6 +8,7 @@ var innlagtIGår = document.getElementById('innlagtIGår');
 var innlagtNå = document.getElementById('innlagtNå');
 var totaltDode = document.getElementById('totaltDode');
 var dodeIDag = document.getElementById('dodeIDag');
+var fylke = document.getElementById('fylke');
 
 var fylke1 = document.getElementById("TromsOgFinnmark");
 var fylke2 = document.getElementById("Nordland");
@@ -82,6 +83,7 @@ var fylkesinfo = [
 
 fylke1.onclick = function(evt){
     event.preventDefault();
+    fylke.innerHTML = "Troms og Finnmark"
     totaltS.innerHTML = fylkesinfo[0].TotaltS;
     nyeS.innerHTML = fylkesinfo[0].NyeS;
     per100kS.innerHTML = fylkesinfo[0].Per100kS;
@@ -91,6 +93,7 @@ fylke1.onclick = function(evt){
     innlagtNå.innerHTML = fylkesinfo[0].InnlagtNå;
     totaltDode.innerHTML = fylkesinfo[0].TotaltDode;
     dodeIDag.innerHTML = fylkesinfo[0].DodeIDag;
+
     if(fylkesinfo[0].Trend=="Stigende"){
         fylke1.style.fill= "#F47C7C";
     }
@@ -103,6 +106,7 @@ fylke1.onclick = function(evt){
 }
 fylke2.onclick = function(evt){
     event.preventDefault();
+    fylke.innerHTML = "Nordland"
     totaltS.innerHTML = fylkesinfo[1].TotaltS;
     nyeS.innerHTML = fylkesinfo[1].NyeS;
     per100kS.innerHTML = fylkesinfo[1].Per100kS;
@@ -124,6 +128,7 @@ fylke2.onclick = function(evt){
 }
 fylke3.onclick = function(evt){
     event.preventDefault();
+    fylke.innerHTML = "Trøndelag"
     totaltS.innerHTML = fylkesinfo[2].TotaltS;
     nyeS.innerHTML = fylkesinfo[2].NyeS;
     per100kS.innerHTML = fylkesinfo[2].Per100kS;
@@ -145,6 +150,7 @@ fylke3.onclick = function(evt){
 }
 fylke4.onclick = function(evt){
     event.preventDefault();
+    fylke.innerHTML = "Innlandet"
     totaltS.innerHTML = fylkesinfo[3].TotaltS;
     nyeS.innerHTML = fylkesinfo[3].NyeS;
     per100kS.innerHTML = fylkesinfo[3].Per100kS;
@@ -166,6 +172,7 @@ fylke4.onclick = function(evt){
 }
 fylke5.onclick = function(evt){
     event.preventDefault();
+    fylke.innerHTML = "Oslo"
     totaltS.innerHTML = fylkesinfo[4].TotaltS;
     nyeS.innerHTML = fylkesinfo[4].NyeS;
     per100kS.innerHTML = fylkesinfo[4].Per100kS;
@@ -187,6 +194,7 @@ fylke5.onclick = function(evt){
 }
 fylke6.onclick = function(evt){
     event.preventDefault();
+    fylke.innerHTML = "Viken"
     totaltS.innerHTML = fylkesinfo[5].TotaltS;
     nyeS.innerHTML = fylkesinfo[5].NyeS;
     per100kS.innerHTML = fylkesinfo[5].Per100kS;
@@ -208,6 +216,7 @@ fylke6.onclick = function(evt){
 }
 fylke7.onclick = function(evt){
     event.preventDefault();
+    fylke.innerHTML = "Vestfold og Telemark"
     totaltS.innerHTML = fylkesinfo[6].TotaltS;
     nyeS.innerHTML = fylkesinfo[6].NyeS;
     per100kS.innerHTML = fylkesinfo[6].Per100kS;
@@ -229,6 +238,7 @@ fylke7.onclick = function(evt){
 }
 fylke8.onclick = function(evt){
     event.preventDefault();
+    fylke.innerHTML = "Møre og Romsdal"
     totaltS.innerHTML = fylkesinfo[7].TotaltS;
     nyeS.innerHTML = fylkesinfo[7].NyeS;
     per100kS.innerHTML = fylkesinfo[7].Per100kS;
@@ -250,6 +260,7 @@ fylke8.onclick = function(evt){
 }
 fylke9.onclick = function(evt){
     event.preventDefault();
+    fylke.innerHTML = "Vestland"
     totaltS.innerHTML = fylkesinfo[8].TotaltS;
     nyeS.innerHTML = fylkesinfo[8].NyeS;
     per100kS.innerHTML = fylkesinfo[8].Per100kS;
@@ -271,6 +282,7 @@ fylke9.onclick = function(evt){
 }
 fylke10.onclick = function(evt){
     event.preventDefault();
+    fylke.innerHTML = "Agder"
     totaltS.innerHTML = fylkesinfo[9].TotaltS;
     nyeS.innerHTML = fylkesinfo[9].NyeS;
     per100kS.innerHTML = fylkesinfo[9].Per100kS;
@@ -292,6 +304,7 @@ fylke10.onclick = function(evt){
 }
 fylke11.onclick = function(evt){
     event.preventDefault();
+    fylke.innerHTML = "Rogaland"
     totaltS.innerHTML = fylkesinfo[10].TotaltS;
     nyeS.innerHTML = fylkesinfo[10].NyeS;
     per100kS.innerHTML = fylkesinfo[10].Per100kS;

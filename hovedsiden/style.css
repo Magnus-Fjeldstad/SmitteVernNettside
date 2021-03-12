@@ -360,6 +360,9 @@ image{
   grid-template-columns: repeat(12,1fr); /* Deler radene i 12 like store ruter*/
   grid-gap: 40px; /* Lager et mellomrom på 20px mellom rutene */
 }
+#tabeller>div>table{
+  border: solid gray 2px;
+}
 
 table {
   width:100%;
