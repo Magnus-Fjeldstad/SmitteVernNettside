@@ -1,14 +1,340 @@
 body {
-  background-color: deepskyblue;
+  width: 100%;
+  background-image: url("bilder/verdenskart60p.png");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: top;
 }
 
 main {
-  width: 1400px;
-  left: 50%;
-  transform: translateX(-50%);
-  position:absolute; 
+  max-width: 1000px;
+  margin: auto;
   text-align: center;
 }
+
+image{
+  opacity: 0.6;
+  
+}
+/*------------------------------ CSS for navbar ---------------------------------------------------------*/
+
+.nav {
+  width: 100%;
+  height: 65px;
+  position: fixed;
+  line-height: 65px;
+  text-align: center;
+}
+
+.nav div.logo {
+  float: left;
+  width: auto;
+  height: auto;
+  padding-left: 3rem;
+}
+
+.nav div.logo a {
+  text-decoration: none;
+  color: gray;
+  font-size: 2.5rem;
+}
+
+.nav div.logo a:hover {
+  color:turquoise;
+}
+
+.nav div.main_list {
+  height: 65px;
+  float: right;
+}
+
+.nav div.main_list ul {
+  width: 100%;
+  height: 65px;
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav div.main_list ul li {
+  width: auto;
+  height: 65px;
+  padding: 0;
+  padding-right: 3rem;
+}
+
+.nav div.main_list ul li a {
+  text-decoration: none;
+  color: gray;
+  line-height: 65px;
+  font-size: 2.4rem;
+}
+
+.nav div.main_list ul li a:hover {
+  color: turquoise;
+}
+
+
+/* Home section */
+.navTrigger {
+  display: none;
+}
+
+.nav {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  -webkit-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+}
+
+
+/* Media qurey section */
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  .container {
+      margin: 0;
+  }
+}
+
+@media screen and (max-width:768px) {
+  .navTrigger {
+      display: block;
+  }
+  .nav div.logo {
+      margin-left: 15px;
+  }
+  .nav div.main_list {
+      width: 100%;
+      height: 0;
+      overflow: hidden;
+  }
+  .nav div.show_list {
+      height: auto;
+      display: none;
+  }
+  .nav div.main_list ul {
+      flex-direction: column;
+      width: 100%;
+      height: 100vh;
+      right: 0;
+      left: 0;
+      bottom: 0;
+      background-color: #111;
+      background-position: center top;
+  }
+  .nav div.main_list ul li {
+      width: 100%;
+      text-align: right;
+  }
+  .nav div.main_list ul li a {
+      text-align: center;
+      width: 100%;
+      font-size: 3rem;
+      padding: 20px;
+  }
+  .nav div.media_button {
+      display: block;
+  }
+}
+
+
+/* Animasjon */
+.navTrigger {
+  cursor: pointer;
+  width: 30px;
+  height: 25px;
+  margin: auto;
+  position: absolute;
+  right: 30px;
+  top: 0;
+  bottom: 0;
+}
+
+.navTrigger i {
+  background-color: #fff;
+  border-radius: 2px;
+  content: '';
+  display: block;
+  width: 100%;
+  height: 4px;
+}
+
+.navTrigger i:nth-child(1) {
+  -webkit-animation: outT 0.8s backwards;
+  animation: outT 0.8s backwards;
+  -webkit-animation-direction: reverse;
+  animation-direction: reverse;
+}
+
+.navTrigger i:nth-child(2) {
+  margin: 5px 0;
+  -webkit-animation: outM 0.8s backwards;
+  animation: outM 0.8s backwards;
+  -webkit-animation-direction: reverse;
+  animation-direction: reverse;
+}
+
+.navTrigger i:nth-child(3) {
+  -webkit-animation: outBtm 0.8s backwards;
+  animation: outBtm 0.8s backwards;
+  -webkit-animation-direction: reverse;
+  animation-direction: reverse;
+}
+
+.navTrigger.active i:nth-child(1) {
+  -webkit-animation: inT 0.8s forwards;
+  animation: inT 0.8s forwards;
+}
+
+.navTrigger.active i:nth-child(2) {
+  -webkit-animation: inM 0.8s forwards;
+  animation: inM 0.8s forwards;
+}
+
+.navTrigger.active i:nth-child(3) {
+  -webkit-animation: inBtm 0.8s forwards;
+  animation: inBtm 0.8s forwards;
+}
+
+@-webkit-keyframes inM {
+  50% {
+      -webkit-transform: rotate(0deg);
+  }
+  100% {
+      -webkit-transform: rotate(45deg);
+  }
+}
+
+@keyframes inM {
+  50% {
+      transform: rotate(0deg);
+  }
+  100% {
+      transform: rotate(45deg);
+  }
+}
+
+@-webkit-keyframes outM {
+  50% {
+      -webkit-transform: rotate(0deg);
+  }
+  100% {
+      -webkit-transform: rotate(45deg);
+  }
+}
+
+@keyframes outM {
+  50% {
+      transform: rotate(0deg);
+  }
+  100% {
+      transform: rotate(45deg);
+  }
+}
+
+@-webkit-keyframes inT {
+  0% {
+      -webkit-transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+      -webkit-transform: translateY(9px) rotate(0deg);
+  }
+  100% {
+      -webkit-transform: translateY(9px) rotate(135deg);
+  }
+}
+
+@keyframes inT {
+  0% {
+      transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+      transform: translateY(9px) rotate(0deg);
+  }
+  100% {
+      transform: translateY(9px) rotate(135deg);
+  }
+}
+
+@-webkit-keyframes outT {
+  0% {
+      -webkit-transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+      -webkit-transform: translateY(9px) rotate(0deg);
+  }
+  100% {
+      -webkit-transform: translateY(9px) rotate(135deg);
+  }
+}
+
+@keyframes outT {
+  0% {
+      transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+      transform: translateY(9px) rotate(0deg);
+  }
+  100% {
+      transform: translateY(9px) rotate(135deg);
+  }
+}
+
+@-webkit-keyframes inBtm {
+  0% {
+      -webkit-transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+      -webkit-transform: translateY(-9px) rotate(0deg);
+  }
+  100% {
+      -webkit-transform: translateY(-9px) rotate(135deg);
+  }
+}
+
+@keyframes inBtm {
+  0% {
+      transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+      transform: translateY(-9px) rotate(0deg);
+  }
+  100% {
+      transform: translateY(-9px) rotate(135deg);
+  }
+}
+
+@-webkit-keyframes outBtm {
+  0% {
+      -webkit-transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+      -webkit-transform: translateY(-9px) rotate(0deg);
+  }
+  100% {
+      -webkit-transform: translateY(-9px) rotate(135deg);
+  }
+}
+
+@keyframes outBtm {
+  0% {
+      transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+      transform: translateY(-9px) rotate(0deg);
+  }
+  100% {
+      transform: translateY(-9px) rotate(135deg);
+  }
+}
+
+.affix {
+  padding: 0;
+  background-color: #111;
+  color: azure;
+}
+
 
 /*------------------------------ CSS for kartet -----------------------------------------------------------*/
 .mapdiv path{
@@ -18,7 +344,7 @@ main {
   transition: fill 0.3s;
 }
 .mapdiv path:hover{
-  fill: red;
+  fill: black;
 }
 
 #kart{
@@ -28,11 +354,11 @@ main {
 
 /*------------------------------ CSS for tabellene i grid--------------------------------------------------*/
 #tabeller{
-  max-width: 1000px; /* Setter bredden på alt i main til mindre enn siden */
+  max-width: 800px; /* Setter bredden på alt i main til mindre enn siden */
   margin: auto;
   display: grid; /* Definerer grid */
   grid-template-columns: repeat(12,1fr); /* Deler radene i 12 like store ruter*/
-  grid-gap: 20px; /* Lager et mellomrom på 20px mellom rutene */
+  grid-gap: 40px; /* Lager et mellomrom på 20px mellom rutene */
 }
 
 table {
@@ -43,35 +369,25 @@ table, th, td {
   border-collapse: collapse;
 }
 th, td {
-  padding: 15px;
+  padding: 5px;
   text-align: center;
   font-family:monospace ;
+  font-size: large;
 }
 table tr{
   color: grey;
   background-color: #fff;
 }
 table th {
-  background-color: white;
+  background-color: #fff;
   color: black;
 }
-
-/*----- Sidebilder ---*/
-#sidenav {
-  width: 200px;
-  position: fixed; /* Virusene flytter ikke på seg når du beveger deg på siden */
-  z-index: 1;
-  bottom: 2px;
-  overflow-x: hidden;
-  padding: 8px 0;
+h2{
+  font-size: xx-large;
 }
-.sidenavV {
-  left: 3px; /* Skaper avstand mellom bilde og venstre kant av skjermen */
+h3{
+ font-size: larger;
 }
-.sidenavH {
-  right: 3px; /* Skaper avstand mellom bilde og høyre kant av skjermen */
-}
-
 
 
 /* Klasser som bestemmer hvor mange ruter elementer skal ta opp i gridden */
