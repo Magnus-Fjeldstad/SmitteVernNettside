@@ -45,37 +45,37 @@ $(window).scroll(function() {
 // Objekter med byinfo
 var fylkesinfo = [
     //TromsOgFinnmark
-    {TotaltS: "1 398", NyeS: "4", Per100kS: "66,2", Trend: "Stigende", Antallkom: "2", InnlagtIGår: "1", InnlagtNå: "2", TotaltDode: "6", DodeIDag: "0"},
+    {TotaltS: "1 416", NyeS: "6", Per100kS: "49,1", Trend: "Synkende", Antallkom: "0", InnlagtIGår: "3", InnlagtNå: "3", TotaltDode: "6", DodeIDag: "0"},
 
     //Nordland
-    {TotaltS: "1 254", NyeS: "12", Per100kS: "71.7", Trend: "Stigende", Antallkom: "2", InnlagtIGår: "4", InnlagtNå: "6", TotaltDode: "2", DodeIDag: "0"},
+    {TotaltS: "1 281", NyeS: "2", Per100kS: "61,2", Trend: "Synkende", Antallkom: "1", InnlagtIGår: "8", InnlagtNå: "8", TotaltDode: "2", DodeIDag: "0"},
 
-    //Trondelag
-    {TotaltS: "3 642", NyeS: "3", Per100kS: "16,6", Trend: "Flat", Antallkom: "0", InnlagtIGår: "5", InnlagtNå: "40", TotaltDode: "13", DodeIDag: "0"},
+    //Trøndelag
+    {TotaltS: "3 655", NyeS: "4", Per100kS: "16,8", Trend: "Flat", Antallkom: "0", InnlagtIGår: "5", InnlagtNå: "5", TotaltDode: "13", DodeIDag: "0"},
 
     //Innlandet
-    {TotaltS: "3 588", NyeS: "12", Per100kS: "42", Trend: "Stigende", Antallkom: "4", InnlagtIGår: "41", InnlagtNå: "40", TotaltDode: "33", DodeIDag: "0"},
+    {TotaltS: "3 629", NyeS: "7", Per100kS: "48", Trend: "Stigende", Antallkom: "2", InnlagtIGår: "56", InnlagtNå: "56", TotaltDode: "33", DodeIDag: "0"},
 
     //Oslo
-    {TotaltS: "22 408", NyeS: "355", Per100kS: "410,2", Trend: "Stigende", Antallkom: "1", InnlagtIGår: "84", InnlagtNå: "87", TotaltDode: "157", DodeIDag: "0"},
+    {TotaltS: "23 352", NyeS: "323", Per100kS: "476,9", Trend: "Stigende", Antallkom: "1", InnlagtIGår: "119", InnlagtNå: "119", TotaltDode: "157", DodeIDag: "0"},
 
     //Viken
-    {TotaltS: "26 119", NyeS: "318", Per100kS: "231,1", Trend: "Stigende", Antallkom: "23", InnlagtIGår: "68", InnlagtNå: "69", TotaltDode: "282", DodeIDag: "0"},
+    {TotaltS: "27 224", NyeS: "337", Per100kS: "289,2", Trend: "Stigende", Antallkom: "22", InnlagtIGår: "92", InnlagtNå: "92", TotaltDode: "282", DodeIDag: "0"},
 
     //VestfoldOgTelemark
-    {TotaltS: "4 216", NyeS: "77", Per100kS: "165,5", Trend: "Stigende", Antallkom: "7", InnlagtIGår: "18", InnlagtNå: "19", TotaltDode: "33", DodeIDag: "0"},
+    {TotaltS: "4 473", NyeS: "78", Per100kS: "215,7", Trend: "Stigende", Antallkom: "8", InnlagtIGår: "21", InnlagtNå: "21", TotaltDode: "33", DodeIDag: "0"},
 
-    //MoreOgRomsdal
-    {TotaltS: "1 319", NyeS: "2", Per100kS: "17,7", Trend: "Stigende", Antallkom: "0", InnlagtIGår: "0", InnlagtNå: "0", TotaltDode: "2", DodeIDag: "0"},
+    //MøreOgRomsdal
+    {TotaltS: "1 328", NyeS: "2", Per100kS: "14,7", Trend: "Synkende", Antallkom: "0", InnlagtIGår: "0", InnlagtNå: "0", TotaltDode: "2", DodeIDag: "0"},
 
     //Vestland
-    {TotaltS: "7 037", NyeS: "16", Per100kS: "30,4", Trend: "Stigende", Antallkom: "2", InnlagtIGår: "7", InnlagtNå: "3", TotaltDode: "75", DodeIDag: "0"},
+    {TotaltS: "7 113", NyeS: "38", Per100kS: "45,4", Trend: "Stigende", Antallkom: "3", InnlagtIGår: "10", InnlagtNå: "10", TotaltDode: "75", DodeIDag: "0"},
 
     //Agder
-    {TotaltS: "2 402", NyeS: "27", Per100kS: "115,9", Trend: "Synkende", Antallkom: "5", InnlagtIGår: "4", InnlagtNå: "4", TotaltDode: "15", DodeIDag: "0"},
+    {TotaltS: "2 445", NyeS: "11", Per100kS: "103,6", Trend: "Synkende", Antallkom: "1", InnlagtIGår: "7", InnlagtNå: "7", TotaltDode: "15", DodeIDag: "0"},
 
     //Rogaland
-    {TotaltS: "3 810", NyeS: "32", Per100kS: "49,2", Trend: "Stigende", Antallkom: "6", InnlagtIGår: "5", InnlagtNå: "2", TotaltDode: "18", DodeIDag: "0"},
+    {TotaltS: "3 968", NyeS: "47", Per100kS: "79,4", Trend: "Stigende", Antallkom: "4", InnlagtIGår: "7", InnlagtNå: "7", TotaltDode: "18", DodeIDag: "0"},
 ];
 
 
