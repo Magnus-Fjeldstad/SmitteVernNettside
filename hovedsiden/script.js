@@ -22,6 +22,9 @@ var fylke9 = document.getElementById("Vestland");
 var fylke10 = document.getElementById("Agder");
 var fylke11 = document.getElementById("Rogaland");
 
+var knapp = document.getElementById("knapp");
+var mapdiv = document.getElementsByClassName("mapdiv");
+
 // Navbar
 $('.navTrigger').click(function () {
     $(this).toggleClass('active');
@@ -81,6 +84,7 @@ var fylkesinfo = [
 
 // Gir tilbake info utifra byen du har trykket på
 
+var a = 1;
 fylke1.onclick = function(evt){
     event.preventDefault();
     fylke.innerHTML = "Troms og Finnmark"
@@ -93,17 +97,26 @@ fylke1.onclick = function(evt){
     innlagtNå.innerHTML = fylkesinfo[0].InnlagtNå;
     totaltDode.innerHTML = fylkesinfo[0].TotaltDode;
     dodeIDag.innerHTML = fylkesinfo[0].DodeIDag;
-
-    if(fylkesinfo[0].Trend=="Stigende"){
-        fylke1.style.fill= "#F47C7C";
+   
+    if (a%2 == 0){
+        fylke1.style.fill= "grey";
+        a++;
     }
-    else if (fylkesinfo[0].Trend=="Flat"){
-        fylke1.style.fill= "#F7F48B";
-    }
-    else if (fylkesinfo[0].Trend=="Synkende"){
-        fylke1.style.fill= "#A1DE93";
+    else{
+        if(fylkesinfo[0].Trend=="Stigende"){
+            fylke1.style.fill= "#F47C7C";
+        }
+        else if (fylkesinfo[0].Trend=="Flat"){
+            fylke1.style.fill= "#F7F48B";
+        }
+        else if (fylkesinfo[0].Trend=="Synkende"){
+            fylke1.style.fill= "#A1DE93";
+        }
+        a++
     }        
 }
+
+var b = 1;
 fylke2.onclick = function(evt){
     event.preventDefault();
     fylke.innerHTML = "Nordland"
@@ -116,16 +129,24 @@ fylke2.onclick = function(evt){
     innlagtNå.innerHTML = fylkesinfo[1].InnlagtNå;
     totaltDode.innerHTML = fylkesinfo[1].TotaltDode;
     dodeIDag.innerHTML = fylkesinfo[1].DodeIDag;
-    if(fylkesinfo[1].Trend=="Stigende"){
-        fylke2.style.fill= "#F47C7C";
+    if (b%2 == 0){
+        fylke2.style.fill= "grey";
+        b++;
     }
-    else if (fylkesinfo[1].Trend=="Flat"){
-        fylke2.style.fill= "#F7F48B";
-    }
-    else if (fylkesinfo[1].Trend=="Synkende"){
-        fylke2.style.fill= "#A1DE93";
-    }           
+    else{
+        if(fylkesinfo[1].Trend=="Stigende"){
+            fylke2.style.fill= "#F47C7C";
+        }
+        else if (fylkesinfo[1].Trend=="Flat"){
+            fylke2.style.fill= "#F7F48B";
+        }
+        else if (fylkesinfo[1].Trend=="Synkende"){
+            fylke2.style.fill= "#A1DE93";
+        }
+        b++;  
+    }        
 }
+var c = 1;
 fylke3.onclick = function(evt){
     event.preventDefault();
     fylke.innerHTML = "Trøndelag"
@@ -138,16 +159,24 @@ fylke3.onclick = function(evt){
     innlagtNå.innerHTML = fylkesinfo[2].InnlagtNå;
     totaltDode.innerHTML = fylkesinfo[2].TotaltDode;
     dodeIDag.innerHTML = fylkesinfo[2].DodeIDag;
-    if(fylkesinfo[2].Trend=="Stigende"){
-        fylke3.style.fill= "#F47C7C";
+    if (c%2 == 0){
+        fylke3.style.fill= "grey";
+        c++;
     }
-    else if (fylkesinfo[2].Trend=="Flat"){
-        fylke3.style.fill= "#F7F48B";
-    }
-    else if (fylkesinfo[2].Trend=="Synkende"){
-        fylke3.style.fill= "#A1DE93";
-    }         
+    else {
+        if(fylkesinfo[2].Trend=="Stigende"){
+            fylke3.style.fill= "#F47C7C";
+        }
+        else if (fylkesinfo[2].Trend=="Flat"){
+            fylke3.style.fill= "#F7F48B";
+        }
+        else if (fylkesinfo[2].Trend=="Synkende"){
+            fylke3.style.fill= "#A1DE93";
+        } 
+        c++;  
+    }   
 }
+var d = 1;
 fylke4.onclick = function(evt){
     event.preventDefault();
     fylke.innerHTML = "Innlandet"
@@ -160,16 +189,24 @@ fylke4.onclick = function(evt){
     innlagtNå.innerHTML = fylkesinfo[3].InnlagtNå;
     totaltDode.innerHTML = fylkesinfo[3].TotaltDode;
     dodeIDag.innerHTML = fylkesinfo[3].DodeIDag;
-    if(fylkesinfo[3].Trend=="Stigende"){
-        fylke4.style.fill= "#F47C7C";
+    if (d%2 == 0){
+        fylke4.style.fill= "grey";
+        d++;
     }
-    else if (fylkesinfo[3].Trend=="Flat"){
-        fylke4.style.fill= "#F7F48B";
-    }
-    else if (fylkesinfo[3].Trend=="Synkende"){
-        fylke4.style.fill= "#A1DE93";
-    }         
+    else {
+        if(fylkesinfo[3].Trend=="Stigende"){
+            fylke4.style.fill= "#F47C7C";
+        }
+        else if (fylkesinfo[3].Trend=="Flat"){
+            fylke4.style.fill= "#F7F48B";
+        }
+        else if (fylkesinfo[3].Trend=="Synkende"){
+            fylke4.style.fill= "#A1DE93";
+        }
+        d++; 
+    }       
 }
+var e =1;
 fylke5.onclick = function(evt){
     event.preventDefault();
     fylke.innerHTML = "Oslo"
@@ -182,16 +219,24 @@ fylke5.onclick = function(evt){
     innlagtNå.innerHTML = fylkesinfo[4].InnlagtNå;
     totaltDode.innerHTML = fylkesinfo[4].TotaltDode;
     dodeIDag.innerHTML = fylkesinfo[4].DodeIDag;
-    if(fylkesinfo[4].Trend=="Stigende"){
-        fylke5.style.fill= "#F47C7C";
+    if (e%2 == 0){
+        fylke5.style.fill= "grey";
+        e++;
     }
-    else if (fylkesinfo[4].Trend=="Flat"){
-        fylke5.style.fill= "#F7F48B";
-    }
-    else if (fylkesinfo[4].Trend=="Synkende"){
-        fylke5.style.fill= "#A1DE93";
-    }         
+    else {
+        if(fylkesinfo[4].Trend=="Stigende"){
+            fylke5.style.fill= "#F47C7C";
+        }
+        else if (fylkesinfo[4].Trend=="Flat"){
+            fylke5.style.fill= "#F7F48B";
+        }
+        else if (fylkesinfo[4].Trend=="Synkende"){
+            fylke5.style.fill= "#A1DE93";
+        }
+        e++;  
+    }   
 }
+var f = 1;
 fylke6.onclick = function(evt){
     event.preventDefault();
     fylke.innerHTML = "Viken"
@@ -204,16 +249,24 @@ fylke6.onclick = function(evt){
     innlagtNå.innerHTML = fylkesinfo[5].InnlagtNå;
     totaltDode.innerHTML = fylkesinfo[5].TotaltDode;
     dodeIDag.innerHTML = fylkesinfo[5].DodeIDag;
-    if(fylkesinfo[5].Trend=="Stigende"){
-        fylke6.style.fill= "#F47C7C";
+    if (f%2 == 0){
+        fylke6.style.fill= "grey";
+        f++;
     }
-    else if (fylkesinfo[5].Trend=="Flat"){
-        fylke6.style.fill= "#F7F48B";
-    }
-    else if (fylkesinfo[5].Trend=="Synkende"){
-        fylke6.style.fill= "#A1DE93";
-    }         
+    else {
+        if(fylkesinfo[5].Trend=="Stigende"){
+            fylke6.style.fill= "#F47C7C";
+        }
+        else if (fylkesinfo[5].Trend=="Flat"){
+            fylke6.style.fill= "#F7F48B";
+        }
+        else if (fylkesinfo[5].Trend=="Synkende"){
+            fylke6.style.fill= "#A1DE93";
+        }    
+        f++;
+    }    
 }
+var g = 1;
 fylke7.onclick = function(evt){
     event.preventDefault();
     fylke.innerHTML = "Vestfold og Telemark"
@@ -226,16 +279,24 @@ fylke7.onclick = function(evt){
     innlagtNå.innerHTML = fylkesinfo[6].InnlagtNå;
     totaltDode.innerHTML = fylkesinfo[6].TotaltDode;
     dodeIDag.innerHTML = fylkesinfo[6].DodeIDag;
-    if(fylkesinfo[6].Trend=="Stigende"){
-        fylke7.style.fill= "#F47C7C";
+    if (g%2 == 0){
+        fylke7.style.fill= "grey";
+        g++;
     }
-    else if (fylkesinfo[6].Trend=="Flat"){
-        fylke7.style.fill= "#F7F48B";
-    }
-    else if (fylkesinfo[6].Trend=="Synkende"){
-        fylke7.style.fill= "#A1DE93";
-    }         
+    else {
+        if(fylkesinfo[6].Trend=="Stigende"){
+            fylke7.style.fill= "#F47C7C";
+        }
+        else if (fylkesinfo[6].Trend=="Flat"){
+            fylke7.style.fill= "#F7F48B";
+        }
+        else if (fylkesinfo[6].Trend=="Synkende"){
+            fylke7.style.fill= "#A1DE93";
+        }
+        g++;   
+    } 
 }
+var h = 1;
 fylke8.onclick = function(evt){
     event.preventDefault();
     fylke.innerHTML = "Møre og Romsdal"
@@ -248,16 +309,24 @@ fylke8.onclick = function(evt){
     innlagtNå.innerHTML = fylkesinfo[7].InnlagtNå;
     totaltDode.innerHTML = fylkesinfo[7].TotaltDode;
     dodeIDag.innerHTML = fylkesinfo[7].DodeIDag;
-    if(fylkesinfo[7].Trend=="Stigende"){
-        fylke8.style.fill= "#F47C7C";
+    if (h%2 == 0){
+        fylke8.style.fill= "grey";
+        h++;
     }
-    else if (fylkesinfo[7].Trend=="Flat"){
-        fylke8.style.fill= "#F7F48B";
-    }
-    else if (fylkesinfo[7].Trend=="Synkende"){
-        fylke8.style.fill= "#A1DE93";
-    }         
+    else {
+        if(fylkesinfo[7].Trend=="Stigende"){
+            fylke8.style.fill= "#F47C7C";
+        }
+        else if (fylkesinfo[7].Trend=="Flat"){
+            fylke8.style.fill= "#F7F48B";
+        }
+        else if (fylkesinfo[7].Trend=="Synkende"){
+            fylke8.style.fill= "#A1DE93";
+        }
+        h++;     
+    }    
 }
+var i = 1;
 fylke9.onclick = function(evt){
     event.preventDefault();
     fylke.innerHTML = "Vestland"
@@ -270,16 +339,24 @@ fylke9.onclick = function(evt){
     innlagtNå.innerHTML = fylkesinfo[8].InnlagtNå;
     totaltDode.innerHTML = fylkesinfo[8].TotaltDode;
     dodeIDag.innerHTML = fylkesinfo[8].DodeIDag;
-    if(fylkesinfo[8].Trend=="Stigende"){
-        fylke9.style.fill= "#F47C7C";
+    if (i%2 == 0){
+        fylke9.style.fill= "grey";
+        i++;
     }
-    else if (fylkesinfo[8].Trend=="Flat"){
-        fylke9.style.fill= "#F7F48B";
+    else {
+        if(fylkesinfo[8].Trend=="Stigende"){
+            fylke9.style.fill= "#F47C7C";
+        }
+        else if (fylkesinfo[8].Trend=="Flat"){
+            fylke9.style.fill= "#F7F48B";
+        }
+        else if (fylkesinfo[8].Trend=="Synkende"){
+            fylke9.style.fill= "#A1DE93";
+        }
+        i++;     
     }
-    else if (fylkesinfo[8].Trend=="Synkende"){
-        fylke9.style.fill= "#A1DE93";
-    }         
 }
+var j = 1;
 fylke10.onclick = function(evt){
     event.preventDefault();
     fylke.innerHTML = "Agder"
@@ -292,16 +369,24 @@ fylke10.onclick = function(evt){
     innlagtNå.innerHTML = fylkesinfo[9].InnlagtNå;
     totaltDode.innerHTML = fylkesinfo[9].TotaltDode;
     dodeIDag.innerHTML = fylkesinfo[9].DodeIDag;
-    if(fylkesinfo[9].Trend=="Stigende"){
-        fylke10.style.fill= "#F47C7C";
+    if (j%2 == 0){
+        fylke10.style.fill= "grey";
+        j++;
     }
-    else if (fylkesinfo[9].Trend=="Flat"){
-        fylke10.style.fill= "#F7F48B";
+    else {
+        if(fylkesinfo[9].Trend=="Stigende"){
+            fylke10.style.fill= "#F47C7C";
+        }
+        else if (fylkesinfo[9].Trend=="Flat"){
+            fylke10.style.fill= "#F7F48B";
+        }
+        else if (fylkesinfo[9].Trend=="Synkende"){
+            fylke10.style.fill= "#A1DE93";
+        }  
+        j++;
     }
-    else if (fylkesinfo[9].Trend=="Synkende"){
-        fylke10.style.fill= "#A1DE93";
-    }         
 }
+var k = 1;
 fylke11.onclick = function(evt){
     event.preventDefault();
     fylke.innerHTML = "Rogaland"
@@ -314,13 +399,36 @@ fylke11.onclick = function(evt){
     innlagtNå.innerHTML = fylkesinfo[10].InnlagtNå;
     totaltDode.innerHTML = fylkesinfo[10].TotaltDode;
     dodeIDag.innerHTML = fylkesinfo[10].DodeIDag;
-    if(fylkesinfo[10].Trend=="Stigende"){
-        fylke11.style.fill= "#F47C7C";
+    if (k%2 == 0){
+        fylke11.style.fill= "grey";
+        k++;
     }
-    else if (fylkesinfo[10].Trend=="Flat"){
-        fylke11.style.fill= "#F7F48B";
+    else {
+        if(fylkesinfo[10].Trend=="Stigende"){
+            fylke11.style.fill= "#F47C7C";
+        }
+        else if (fylkesinfo[10].Trend=="Flat"){
+            fylke11.style.fill= "#F7F48B";
+        }
+        else if (fylkesinfo[10].Trend=="Synkende"){
+            fylke11.style.fill= "#A1DE93";
+        }
+        k++;         
     }
-    else if (fylkesinfo[10].Trend=="Synkende"){
-        fylke11.style.fill= "#A1DE93";
-    }         
+}
+
+// Knapp som tømmer kartet for farge
+knapp.onclick = function(evt){
+    event.preventDefault();
+    fylke1.style.fill = "grey";
+    fylke2.style.fill = "grey";
+    fylke3.style.fill = "grey";
+    fylke4.style.fill = "grey";
+    fylke5.style.fill = "grey";
+    fylke6.style.fill = "grey";
+    fylke7.style.fill = "grey";
+    fylke8.style.fill = "grey";
+    fylke9.style.fill = "grey";
+    fylke10.style.fill = "grey";
+    fylke11.style.fill = "grey";
 }

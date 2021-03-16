@@ -1,6 +1,6 @@
 body {
   width: 100%;
-  background-image: url("bilder/verdenskart60p.png");
+  background-image: url("bilder/verdenskart5_60p.png");
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-position: top;
@@ -35,7 +35,7 @@ image{
 
 .nav div.logo a {
   text-decoration: none;
-  color: gray;
+  color: #111;
   font-size: 2.5rem;
 }
 
@@ -66,7 +66,7 @@ image{
 
 .nav div.main_list ul li a {
   text-decoration: none;
-  color: gray;
+  color: #111;
   line-height: 65px;
   font-size: 2.4rem;
 }
@@ -89,7 +89,7 @@ image{
 }
 
 
-/* Media qurey section */
+/* Endrer nav når gjør skjermen liten */
 
 @media screen and (min-width: 768px) and (max-width: 1024px) {
   .container {
@@ -120,7 +120,7 @@ image{
       right: 0;
       left: 0;
       bottom: 0;
-      background-color: #111;
+      background-color: #fff;
       background-position: center top;
   }
   .nav div.main_list ul li {
@@ -152,7 +152,7 @@ image{
 }
 
 .navTrigger i {
-  background-color: #fff;
+  background-color: #111;
   border-radius: 2px;
   content: '';
   display: block;
@@ -197,142 +197,11 @@ image{
   animation: inBtm 0.8s forwards;
 }
 
-@-webkit-keyframes inM {
-  50% {
-      -webkit-transform: rotate(0deg);
-  }
-  100% {
-      -webkit-transform: rotate(45deg);
-  }
-}
-
-@keyframes inM {
-  50% {
-      transform: rotate(0deg);
-  }
-  100% {
-      transform: rotate(45deg);
-  }
-}
-
-@-webkit-keyframes outM {
-  50% {
-      -webkit-transform: rotate(0deg);
-  }
-  100% {
-      -webkit-transform: rotate(45deg);
-  }
-}
-
-@keyframes outM {
-  50% {
-      transform: rotate(0deg);
-  }
-  100% {
-      transform: rotate(45deg);
-  }
-}
-
-@-webkit-keyframes inT {
-  0% {
-      -webkit-transform: translateY(0px) rotate(0deg);
-  }
-  50% {
-      -webkit-transform: translateY(9px) rotate(0deg);
-  }
-  100% {
-      -webkit-transform: translateY(9px) rotate(135deg);
-  }
-}
-
-@keyframes inT {
-  0% {
-      transform: translateY(0px) rotate(0deg);
-  }
-  50% {
-      transform: translateY(9px) rotate(0deg);
-  }
-  100% {
-      transform: translateY(9px) rotate(135deg);
-  }
-}
-
-@-webkit-keyframes outT {
-  0% {
-      -webkit-transform: translateY(0px) rotate(0deg);
-  }
-  50% {
-      -webkit-transform: translateY(9px) rotate(0deg);
-  }
-  100% {
-      -webkit-transform: translateY(9px) rotate(135deg);
-  }
-}
-
-@keyframes outT {
-  0% {
-      transform: translateY(0px) rotate(0deg);
-  }
-  50% {
-      transform: translateY(9px) rotate(0deg);
-  }
-  100% {
-      transform: translateY(9px) rotate(135deg);
-  }
-}
-
-@-webkit-keyframes inBtm {
-  0% {
-      -webkit-transform: translateY(0px) rotate(0deg);
-  }
-  50% {
-      -webkit-transform: translateY(-9px) rotate(0deg);
-  }
-  100% {
-      -webkit-transform: translateY(-9px) rotate(135deg);
-  }
-}
-
-@keyframes inBtm {
-  0% {
-      transform: translateY(0px) rotate(0deg);
-  }
-  50% {
-      transform: translateY(-9px) rotate(0deg);
-  }
-  100% {
-      transform: translateY(-9px) rotate(135deg);
-  }
-}
-
-@-webkit-keyframes outBtm {
-  0% {
-      -webkit-transform: translateY(0px) rotate(0deg);
-  }
-  50% {
-      -webkit-transform: translateY(-9px) rotate(0deg);
-  }
-  100% {
-      -webkit-transform: translateY(-9px) rotate(135deg);
-  }
-}
-
-@keyframes outBtm {
-  0% {
-      transform: translateY(0px) rotate(0deg);
-  }
-  50% {
-      transform: translateY(-9px) rotate(0deg);
-  }
-  100% {
-      transform: translateY(-9px) rotate(135deg);
-  }
-}
 
 .affix {
   padding: 0;
-  background-color: #111;
-  color: azure;
+  background-color: #fff;
+  border: double #111;
 }
 
 
@@ -351,6 +220,11 @@ image{
 #kart{
   height: 790px;
   width: 740px;
+}
+
+#knapp {
+  background-color: #111;
+  color: #fff;
 }
 
 /*------------------------------ CSS for tabellene i grid--------------------------------------------------*/
