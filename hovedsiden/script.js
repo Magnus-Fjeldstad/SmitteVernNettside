@@ -97,15 +97,12 @@ function Norge(){
     totaltDode.innerHTML = fylkesinfo[11].TotaltDode;
     dodeIDag.innerHTML = fylkesinfo[11].DodeIDag;
     if(fylkesinfo[11].Trend=="Stigende"){
-        fylke1.style.fill= "#F47C7C";
         trend.src = "bilder/" + "pos_trend.png";
     }
     else if (fylkesinfo[11].Trend=="Flat"){
-        fylke1.style.fill= "#F7F48B";
         trend.src = "bilder/" + "flat_trend.png";
     }
     else if (fylkesinfo[11].Trend=="Synkende"){
-        fylke1.style.fill= "#A1DE93";
         trend.src = "bilder/" + "neg_trend.png";
     }
 }
