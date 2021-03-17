@@ -1,6 +1,6 @@
 body {
   width: 100%;
-  background-image: url("bilder/verdenskart5_60p.png");
+  background-image: url("bilder/verdenskart5_40_60p.png");
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-position: top;
@@ -12,10 +12,10 @@ main {
   text-align: center;
 }
 
-image{
-  opacity: 0.6;
-  
+#trend {
+  height:30px;
 }
+
 /*------------------------------ CSS for navbar ---------------------------------------------------------*/
 
 .nav {
@@ -222,11 +222,6 @@ image{
   width: 740px;
 }
 
-#knapp {
-  background-color: #111;
-  color: #fff;
-}
-
 /*------------------------------ CSS for tabellene i grid--------------------------------------------------*/
 #tabeller{
   max-width: 800px; /* Setter bredden på alt i main til mindre enn siden */
@@ -235,8 +230,9 @@ image{
   grid-template-columns: repeat(12,1fr); /* Deler radene i 12 like store ruter*/
   grid-gap: 40px; /* Lager et mellomrom på 20px mellom rutene */
 }
-#tabeller>div>table{
+#tabeller>div{
   border: solid gray 2px;
+  background-color: #fff;
 }
 
 table {
@@ -254,11 +250,10 @@ th, td {
 }
 table tr{
   color: grey;
-  background-color: #fff;
 }
 table th {
-  background-color: #fff;
-  color: black;
+  color: red;
+  font-size: x-large;
 }
 h2{
   font-size: xx-large;
