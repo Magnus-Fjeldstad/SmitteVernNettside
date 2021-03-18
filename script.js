@@ -108,11 +108,11 @@ function Norge(){
 }
 Norge();
 
-// Gir tilbake info utifra byen du har trykket på
-
+//--------- Gir tilbake info utifra byen du har trykket på
 var a = 1;
 fylke1.onclick = function(evt){
     event.preventDefault();
+    //Gjør alle andre fylker enn den du trykker på grå
     fylke2.style.fill = "grey";
     fylke3.style.fill = "grey";
     fylke4.style.fill = "grey";
@@ -124,6 +124,7 @@ fylke1.onclick = function(evt){
     fylke10.style.fill = "grey";
     fylke11.style.fill = "grey";
 
+    //Setter 
     b = 1;
     c = 1;
     d = 1;
