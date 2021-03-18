@@ -1,0 +1,81 @@
+main {
+    max-width: 1000px;
+    margin: auto;
+    text-align: center;
+}
+#trend {
+    height:30px;
+}
+/*------------------------------ CSS for kartet -----------------------------------------------------------*/
+.mapdiv path{
+    fill: grey;
+    stroke: white;
+    stroke-width: 1px;
+    transition: fill 0.3s;
+}
+.mapdiv path:hover{
+cursor: pointer;
+stroke: black;
+stroke-width: 2.5px;
+}
+
+#kart{
+height: 790px;
+width: 740px;
+}
+
+/*------------------------------ CSS for tabellene i grid--------------------------------------------------*/
+#tabeller{
+max-width: 800px; /* Setter bredden på alt i main til mindre enn siden */
+margin: auto;
+display: grid; /* Definerer grid */
+grid-template-columns: repeat(12,1fr); /* Deler radene i 12 like store ruter*/
+grid-gap: 40px; /* Lager et mellomrom på 20px mellom rutene */
+}
+#tabeller>div{
+border: solid gray 2px;
+background-color: #fff;
+}
+
+table {
+width:100%;
+}
+table, th, td {
+border: 1px solid white;
+border-collapse: collapse;
+}
+th, td {
+padding: 5px;
+text-align: center;
+font-family:monospace ;
+font-size: large;
+}
+table tr{
+color: grey;
+}
+table th {
+color: red;
+font-size: x-large;
+}
+h2{
+font-size: xx-large;
+}
+h3{
+font-size: larger;
+}
+
+
+/* Klasser som bestemmer hvor mange ruter elementer skal ta opp i gridden */
+.kol-1 {grid-column: span 1;}
+.kol-2 {grid-column: span 2;}
+.kol-3 {grid-column: span 3;}
+.kol-4 {grid-column: span 4;}
+.kol-5 {grid-column: span 5;}
+.kol-6 {grid-column: span 6;}
+.kol-7 {grid-column: span 7;}
+.kol-8 {grid-column: span 8;}
+.kol-9 {grid-column: span 9;}
+.kol-10 {grid-column: span 10;}
+.kol-11 {grid-column: span 11;}
+.kol-12 {grid-column: span 12;}
+
