@@ -204,28 +204,28 @@ body {
 
   /*------------------------------------------------------------CSS For Chat------------------------------------------------*/
 
-  input{
-    border-style: solid;
-    background-color: aqua;
+  .inputMld{
+    background-color: lightgray;
     border-radius: 25px;
     padding: 5px;
     width: 100px;
     height: 14px;
   }
-  }
-
-  .button{
-    border-style: double;
-     border-radius: 25px;
-     background: #73AD21;
-     padding: 20px;
-     width: 200px;
-     height: 150px;
-  }
 
   #chatBox{
     border-style: solid;
-    border-color: black;
+    border-color: grey;
     margin-left: 20%;
     margin-right: 20%;
+    border-radius: 25px;
+    background-color: white;
+    opacity: 0.8;
+  }
+  input:focus{
+    outline:0;
+  }
+
+  #sendIkon{
+    width: 20px;
+    background-color: none;
   }

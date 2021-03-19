@@ -46,7 +46,7 @@
 				let melding= snapshot.val();
 				let meldingTekst= `<p>
 					<b> ${melding.avsender}: </b>
-					<i> ${melding.tekst}</i>
+					<div> ${melding.tekst}</div>
 					</p>`;
 				txtMeldinger.innerHTML= txtMeldinger.innerHTML+ meldingTekst;
 			}
