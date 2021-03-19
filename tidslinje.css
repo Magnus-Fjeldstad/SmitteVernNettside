@@ -32,6 +32,12 @@ main{
     border-radius: 10px;
     margin-bottom: 20px;
 }
+.timeline ul li p{
+    margin-bottom: 10px;
+}
+.timeline .timelineImg{
+    width: 0;
+}
 .timeline ul li:last-child{
     margin-bottom: 0;
 }
@@ -53,6 +59,7 @@ main{
     letter-spacing: 2px;
     color: black;
 }
+/*----------------- Interaktiv tidslijne så lenge skjermen er minst 768px bred -----------------------*/
 @media only screen and (min-width: 768px){
     .timeline::before{
         content:'';
@@ -67,6 +74,9 @@ main{
         width: 50%;
         margin-bottom: 50px;
         position: relative;
+    }
+    .timeline .timelineImg{
+        width: 280px;
     }
     .timeline ul li:nth-child(odd){
         float: left;
@@ -98,7 +108,10 @@ main{
         left: -30px;
     }
     .timeline ul li:hover:after{
-        background-color: rgb(0, 60, 255);
+        background-color: turquoise;
+    }
+    .timeline ul li:hover{
+        background-color: rgb(60, 165, 165);
     }
     .timeline-content .dato{
         position: absolute;
