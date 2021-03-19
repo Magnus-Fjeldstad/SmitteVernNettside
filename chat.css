@@ -10,9 +10,8 @@ body {
   main {
     max-width: 1000px;
     margin: auto;
-    text-align: center;
   }
-
+  
 /*------------------------------ CSS for navbar ---------------------------------------------------------*/
 
 .nav {
@@ -203,13 +202,16 @@ body {
 
 
   /*------------------------------------------------------------CSS For Chat------------------------------------------------*/
-
+    h1{
+      text-align: center;
+    }
   .inputMld{
     background-color: lightgray;
     border-radius: 25px;
     padding: 5px;
     width: 100px;
     height: 14px;
+    float: right;
   }
 
   #chatBox{
@@ -220,6 +222,8 @@ body {
     border-radius: 25px;
     background-color: white;
     opacity: 0.8;
+    height: 250px;
+    overflow-y: auto;
   }
   input:focus{
     outline:0;
@@ -228,4 +232,22 @@ body {
   #sendIkon{
     width: 20px;
     background-color: none;
+    float: right;
+  }
+  #inpDiv{
+    margin-left: 20%;
+    margin-right: 20%;
+  }
+
+  #avsender{
+    color: red;
+    float: left;
+  }
+
+  #meldingTxt{
+    background-color: rgb(41, 150, 240);
+    border-radius: 25px;
+    padding: 5px;
+    height: 14px;
+    left: 5px;
   }
