@@ -45,8 +45,8 @@
 			function visMelding(snapshot){
 				let melding= snapshot.val();
 				let meldingTekst= `<p>
-					<b> ${melding.avsender}: </b>
-					<i> ${melding.tekst}</i>
+					<b id="avsender">${melding.avsender}: </b>
+					<i id="meldingTxt">${melding.tekst}</i>
 					</p>`;
 				txtMeldinger.innerHTML= txtMeldinger.innerHTML+ meldingTekst;
 			}

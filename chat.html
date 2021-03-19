@@ -33,16 +33,20 @@
         </header>
 
 		<main>
-			<h1>CoronaChat</h1>
+			<h1>Snakk med en lege</h1>
 			<div id="chatBox">
-				<form id="skjema">
-					<input type="text" id="inpAvsender" required placeholder="Hvem er du?">
-					<input type="text" id="inpMening" required placeholder="Hva sier du?">
-					<button type="submit" class="button">Send</button>
-				</form>
 			
 				<article id="txtMeldinger"></article>
+						
 			</div>
+
+			<div id="inpDiv">
+				<form id="skjema">				
+					<input id="sendIkon" type="image" name="submit" src="bilder/sendikon.png"  alt="Submit" />
+					<input class="inputMld" type="text" id="inpMening" required placeholder="Aa">
+					<input class="inputMld" type="text" id="inpAvsender" required placeholder="Hvem er du?">
+				</form>	
+			</div>	
 		</main>
 
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
