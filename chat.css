@@ -200,3 +200,32 @@ body {
     background-color: #fff;
     border: double #111;
   }
+
+
+  /*------------------------------------------------------------CSS For Chat------------------------------------------------*/
+
+  input{
+    border-style: solid;
+    background-color: aqua;
+    border-radius: 25px;
+    padding: 5px;
+    width: 100px;
+    height: 14px;
+  }
+  }
+
+  .button{
+    border-style: double;
+     border-radius: 25px;
+     background: #73AD21;
+     padding: 20px;
+     width: 200px;
+     height: 150px;
+  }
+
+  #chatBox{
+    border-style: solid;
+    border-color: black;
+    margin-left: 20%;
+    margin-right: 20%;
+  }

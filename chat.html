@@ -34,13 +34,15 @@
 
 		<main>
 			<h1>CoronaChat</h1>
-
-			<form id="skjema">
-				<input type="text" id="inpAvsender" required placeholder="Hvem er du?">
-				<input type="text" id="inpMening" required placeholder="Hva sier du?">
-				<button type="submit" class="button">OK</button>
-			</form>
-			<article id="txtMeldinger"></article>
+			<div id="chatBox">
+				<form id="skjema">
+					<input type="text" id="inpAvsender" required placeholder="Hvem er du?">
+					<input type="text" id="inpMening" required placeholder="Hva sier du?">
+					<button type="submit" class="button">Send</button>
+				</form>
+			
+				<article id="txtMeldinger"></article>
+			</div>
 		</main>
 
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
