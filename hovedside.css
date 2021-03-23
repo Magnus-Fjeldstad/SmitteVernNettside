@@ -3,65 +3,65 @@ main {
     margin: auto;
     text-align: center;
 }
-#trend {
+#trend { /* bildene/pilene for trend */
     height:30px;
 }
 /*------------------------------ CSS for kartet -----------------------------------------------------------*/
-.mapdiv path{
+.mapdiv path{ /* Hver enkelt fylke */
     fill: grey;
     stroke: white;
     stroke-width: 1px;
     transition: fill 0.3s;
 }
-.mapdiv path:hover{
-cursor: pointer;
-stroke: black;
-stroke-width: 2.5px;
+.mapdiv path:hover{ /* Animsjon når hover over ett fylke*/
+    cursor: pointer;
+    stroke: black;
+    stroke-width: 2.5px;
 }
 
-#kart{
-height: 790px;
-width: 740px;
+#kart{ /*Hele kartet over Norge */
+    height: 790px;
+    width: 740px;
 }
 
 /*------------------------------ CSS for tabellene i grid--------------------------------------------------*/
 #tabeller{
-max-width: 800px; /* Setter bredden på alt i main til mindre enn siden */
-margin: auto;
-display: grid; /* Definerer grid */
-grid-template-columns: repeat(12,1fr); /* Deler radene i 12 like store ruter*/
-grid-gap: 40px; /* Lager et mellomrom på 20px mellom rutene */
+    max-width: 800px; /* Setter bredden på alt i main til mindre enn siden */
+    margin: auto;
+    display: grid; /* Definerer grid */
+    grid-template-columns: repeat(12,1fr); /* Deler radene i 12 like store ruter*/
+    grid-gap: 40px; /* Lager et mellomrom på 20px mellom rutene */
 }
 #tabeller>div{
-border: solid gray 2px;
-background-color: #fff;
+    border: solid gray 2px;
+    background-color: #fff;
 }
 
 table {
-width:100%;
+    width:100%;
 }
 table, th, td {
-border: 1px solid white;
-border-collapse: collapse;
+    border: 1px solid white;
+    border-collapse: collapse;
 }
 th, td {
-padding: 5px;
-text-align: center;
-font-family:monospace ;
-font-size: large;
+    padding: 5px;
+    text-align: center;
+    font-family:monospace ;
+    font-size: large;
 }
 table tr{
-color: grey;
+    color: grey;
 }
 table th {
-color: red;
-font-size: x-large;
+    color: red;
+    font-size: x-large;
 }
 h2{
-font-size: xx-large;
+    font-size: xx-large;
 }
 h3{
-font-size: larger;
+    font-size: larger;
 }
 
 

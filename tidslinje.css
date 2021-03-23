@@ -1,36 +1,38 @@
+/* Importerer fonter fra google */
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500&display=swap');
-*{
+
+*{ /* Fjerner mellomrom mellom alle elementer */
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+    box-sizing: border-box; /* Gjør at padding blir del av elementets totale høyde og bredde*/
 }
 main{
     font-family: 'Montserrart', sans-serif;
 }
-.container-timeline{
-    min-height: 100vh;
+.container-timeline{ /* Ytterste DIV-en rundt hele tidslinjen */
+    min-height: 100vh; /* Relativ til 1% av høyden på viewport */
     width: 100%;
     display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 100px 0;
+    align-items: center; /* Setter at innhold skal være sentrert som default */
+    justify-content: center; /* Sentrerer horisontalt */
+    padding: 100px 0; /* Padding på topp og bunn er 100px, mens padding til høyre og venstre er 0 */
 }
-.timeline{
-    width: 80%;
+.timeline{ /* DIV-en rundt hele tidslinjen */
+    width: 80%; 
     height: auto;
     max-width: 800px;
     margin: 0 auto;
     position: relative;  
 }
-.timeline ul {
-    list-style: none;
+.timeline ul { /* ul rundt alt listeinnholdet/datoene */
+    list-style: none; /* Fjerner prikkene fra listeinnholdet */
 }
-.timeline ul li{
+.timeline ul li{ /* CSS-en går på hvert enkelt listeinnhold/dato */
     padding: 20px;
     background-color: grey;    
     color: #fff;
-    border-radius: 10px;
-    margin-bottom: 20px;
+    border-radius: 10px; 
+    margin-bottom: 20px; /* Avstad mellom hvert listeinnhold/dato */
 }
 .timeline ul li p{
     margin-bottom: 10px;
@@ -38,21 +40,21 @@ main{
 .timeline .timelineImg{
     width: 0;
 }
-.timeline ul li:last-child{
+.timeline ul li:last-child{ /* Gjelder bare siste listeinnhold/dato*/
     margin-bottom: 0;
 }
-.timeline-content h1{
+.timeline-content h1{ /* h1 i hvert listeinnhold*/
     font-size: 25px;
     font-weight: 500;
     line-height: 30px;
-    margin-bottom: 10px;
+    margin-bottom: 10px; 
 }
-.timeline-content p{
+.timeline-content p{ 
     font-size: 16px;
     line-height: 30px;
     font-weight: 300;
 }
-.timeline-content .dato{
+.timeline-content .dato{ /* h2/datoen i hvert listeinnhold */
     font-size: 13px;
     font-weight: 300;
     margin-bottom: 10px;
@@ -60,11 +62,11 @@ main{
     color: black;
 }
 
-/*---------------- CSS for trekkspilleffekt ----------------------------------------*/
+/*--------------------- CSS for trekkspilleffekt ----------------------------------------*/
 #accordion ul li div section{ /*Lukker bilde og tekst i divene*/
     display: none;
 }
-#accordion ul li div a{ /* Utseedne for linkene/overskriftene */
+#accordion ul li div a{ /* Utseende for linkene/overskriftene */
     text-decoration: none;
     color: white;
 }
@@ -74,59 +76,68 @@ main{
 
 /*----------------- Interaktiv tidslijne så lenge skjermen er minst 768px bred -----------------------*/
 @media only screen and (min-width: 768px){
-    .timeline::before{
+    .timeline::before{ /* Vertikale linjen i midten */
         content:'';
         position: absolute;
         height: 100%;
         width: 2px;
-        left: 50%;
-        transform: translateX(-50%);
+        left: 50%; 
+        transform: translateX(-50%); /* Sentrerer linjen helt */
         background-color: grey;
     }
     .timeline ul li{
-        width: 50%;
+        width: 50%; 
         margin-bottom: 50px;
         position: relative;
     }
     .timeline .timelineImg{
         width: 280px;
     }
-    .timeline ul li:nth-child(odd){
-        float: left;
-        clear: right;
-        transform: translateX(-30px);
-        border-radius: 20px 0px 20px 20px;
+    .timeline ul li:nth-child(odd){ 
+        float: left; /* Flytter annenhver listeinnhold/dato mot venstre */
+        clear: right; /* Bare ett listeinnhold per linje  */
+        transform: translateX(-30px); /* Avstand fra linjen */
+        border-radius: 20px 0px 20px 20px; /* Øvre høyre hjørne er ikke avrundet */
     }
-    .timeline ul li:nth-child(even){
-        float: right;
-        clear: left;
-        transform: translateX(30px);
-        border-radius: 0px 20px 20px 20px;
+    .timeline ul li:nth-child(even){ 
+        float: right; /* Flytter annenhver listeinnhold/dato mot høyre */
+        clear: left; /* Bare ett listeinnhold per linje  */
+        transform: translateX(30px); /* Avstand fra linjen */
+        border-radius: 0px 20px 20px 20px; /* Øvre venstre hjørne er ikke avrundet */
     }
-    .timeline ul li::after{
+
+    /*--------------------- CSS for prikkene på tidslinjen -------------------------*/
+    .timeline ul li::after{ /* Skaper prikkene på linjen */
         content: '';
         position: absolute;
         height: 20px;
         width: 20px;
         background-color: black;
         border-radius: 50%;
-        top: 0;
+        top: 0; /* Setter prikken i toppen av listeinnholdet */
     }
+    /* Setter prikken på linjen*/
     .timeline ul li:nth-child(odd)::after{
-        transform: translate(50%,-50%);
+        transform: translate(50%,-50%); 
         right: -30px;
     }
+    /* Setter prikken på linjen*/
     .timeline ul li:nth-child(even)::after{
         transform: translate(-50%,-50%);
         left: -30px;
     }
+    /* Endrer fargen når hover */
     .timeline ul li:hover:after{
         background-color: rgb(126, 185, 185);
     }
-    .timeline ul li:hover{
+    /*-------------------------------------*/
+
+    /* Endrer fargen på listeelement når hover */
+    .timeline ul li:hover{ 
         background-color: rgb(126, 185, 185);
     }
-    .timeline-content .dato{
+    /* Flytter datoen over listeelementet */
+    .timeline-content .dato{ 
         position: absolute;
         top: -25px;
     }

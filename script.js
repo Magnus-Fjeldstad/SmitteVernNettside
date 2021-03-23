@@ -94,6 +94,7 @@ function Norge(){
     innlagtNå.innerHTML = fylkesinfo[11].InnlagtNå;
     totaltDode.innerHTML = fylkesinfo[11].TotaltDode;
     dodeIDag.innerHTML = fylkesinfo[11].DodeIDag;
+    // Bestemmer bilde/pil utifra smittetrenden
     if(fylkesinfo[11].Trend=="Stigende"){
         trend.src = "bilder/" + "pos_trend.png";
     }
@@ -104,9 +105,9 @@ function Norge(){
         trend.src = "bilder/" + "neg_trend.png";
     }
 }
-Norge();
+Norge(); /* Kjører koden når du åpner siden */ 
 
-//--------- Gir tilbake info utifra byen du har trykket på
+//--------- Gir tilbake info utifra fylket du har trykket på
 var a = 1;
 fylke1.onclick = function(evt){
     event.preventDefault();
@@ -134,7 +135,7 @@ fylke1.onclick = function(evt){
     j = 1;
     k = 1;
 
-    if (a%2 == 0){
+    if (a%2 == 0){ /* Går tilbake til "default" annenhver gang du trykker på fylket */
         Norge();
         fylke1.style.fill= "grey";
         a++;
