@@ -61,7 +61,9 @@ main{
     letter-spacing: 2px;
     color: black;
 }
-
+.timeline .timelineImg{
+    width: 360px;
+}
 /*--------------------- CSS for trekkspilleffekt ----------------------------------------*/
 #accordion ul li div section{ /*Lukker bilde og tekst i divene*/
     display: none;
@@ -89,9 +91,6 @@ main{
         width: 50%; 
         margin-bottom: 50px;
         position: relative;
-    }
-    .timeline .timelineImg{
-        width: 280px;
     }
     .timeline ul li:nth-child(odd){ 
         float: left; /* Flytter annenhver listeinnhold/dato mot venstre */
@@ -140,5 +139,14 @@ main{
     .timeline-content .dato{ 
         position: absolute;
         top: -25px;
+    }
+    .timeline .timelineImg{
+        width: 340px;
+    }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 920px){ /* Setter lavere bredde på bildet når siden er mellom 768px og 920px bred*/
+    .timeline .timelineImg{
+        width: 280px;
     }
 }

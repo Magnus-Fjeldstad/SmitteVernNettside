@@ -11,12 +11,17 @@ body {
 .nav {
   width: 100%;
   height: 65px;
-  position: fixed;
+  position: fixed; /* Fast posisjon på siden */
   line-height: 65px;
   text-align: center;
   z-index: 9999; /*Gjør at nav ikke havner bak annet innhold på siden*/
+  padding-top: 20px;
+  padding-bottom: 20px;
+  -webkit-transition: all 0.4s ease;
+  transition: all 0.4s ease;
 }
 
+/*--- CSS for logo/ "CORONAVIRUSET" ---*/
 .nav div.logo {
   float: left;
   width: auto;
@@ -30,10 +35,11 @@ body {
   font-size: 2.5rem;
 }
 
-.nav div.logo a:hover {
+.nav div.logo a:hover { /* Animasjon for hover*/
   color:turquoise;
 }
 
+/*--- CSS for de andre liknene "Chat", "vaksinesiden" osv. ---*/
 .nav div.main_list {
   height: 65px;
   float: right;
@@ -62,7 +68,7 @@ body {
   font-size: 2.4rem;
 }
 
-.nav div.main_list ul li a:hover {
+.nav div.main_list ul li a:hover { /* Endrer fargen på linken når hover*/
   color: turquoise;
 }
 
@@ -72,23 +78,9 @@ body {
   display: none;
 }
 
-.nav {
-  padding-top: 20px;
-  padding-bottom: 20px;
-  -webkit-transition: all 0.4s ease;
-  transition: all 0.4s ease;
-}
 
 
-/* Endrer nav når gjør skjermen liten */
-
-@media screen and (min-width: 1000px) and (max-width: 1024px) {
-  .container {
-      margin: 0;
-  }
-}
-
-@media screen and (max-width:1000px) {
+@media screen and (max-width:1000px) { /* Endrer nav når skjermen er smalere enn 1000px */
   .navTrigger {
       display: block;
   }
@@ -130,7 +122,7 @@ body {
 }
 
 
-/* Animasjon */
+/*--- CSS for nedtrekkslsten ---*/
 .navTrigger {
   cursor: pointer;
   width: 30px;
@@ -188,6 +180,7 @@ body {
   animation: inBtm 0.8s forwards;
 }
 
+/* CSS for nav som blir gyldig når du scroller langt nok ned på siden */
 .affix {
   padding: 0;
   background-color: #fff;
