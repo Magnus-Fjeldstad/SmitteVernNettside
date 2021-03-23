@@ -240,14 +240,25 @@ body {
   }
 
   #avsender{
-    color: red;
+    color: black;
     float: left;
   }
 
   #meldingTxt{
     background-color: rgb(41, 150, 240);
+    opacity:1;
+    color: white;
     border-radius: 25px;
-    padding: 5px;
+    padding-top: 1px;
+    padding-bottom: 1px;
+    padding-left: 3px;
+    padding-right: 3px;
     height: 14px;
     left: 5px;
+  }
+  b{
+    font-size: 1.2em;
+  }
+  i{
+    font-size:1.2em;
   }
