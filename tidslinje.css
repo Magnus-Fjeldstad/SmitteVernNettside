@@ -64,6 +64,9 @@ main{
 .timeline .timelineImg{
     width: 360px;
 }
+
+
+
 /*--------------------- CSS for trekkspilleffekt ----------------------------------------*/
 #accordion ul li div section{ /*Lukker bilde og tekst i divene*/
     display: none;
@@ -75,6 +78,8 @@ main{
 #accordion ul li div:target section{ /* Viser innholdet til diven man trykker på */
     display: block;
 }
+
+
 
 /*----------------- Interaktiv tidslijne så lenge skjermen er minst 768px bred -----------------------*/
 @media only screen and (min-width: 768px){

@@ -73,56 +73,52 @@ body {
 }
 
 
-/* Home section */
+/* Skjuler versjon to av nav */
 .navTrigger {
   display: none;
 }
 
 
-
-@media screen and (max-width:1000px) { /* Endrer nav når skjermen er smalere enn 1000px */
+@media screen and (max-width:1000px) { /* Endrer nav til hamburgermeny når skjermen er smalere enn 1000px */
   .navTrigger {
-      display: block;
+    display: block;
   }
   .nav div.logo {
-      margin-left: 15px;
+    margin-left: 15px;
   }
   .nav div.main_list {
-      width: 100%;
-      height: 0;
-      overflow: hidden;
+    width: 100%;
+    height: 0;
+    overflow: hidden;
   }
   .nav div.show_list {
-      height: auto;
-      display: none;
+    height: auto;
+    display: none;
   }
   .nav div.main_list ul {
-      flex-direction: column;
-      width: 100%;
-      height: 100vh;
-      right: 0;
-      left: 0;
-      bottom: 0;
-      background-color: #fff;
-      background-position: center top;
+    flex-direction: column;
+    width: 100%;
+    height: 100vh;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    background-color: #fff;
+    background-position: center top;
   }
   .nav div.main_list ul li {
-      width: 100%;
-      text-align: right;
+    width: 100%;
+    text-align: right;
   }
   .nav div.main_list ul li a {
-      text-align: center;
-      width: 100%;
-      font-size: 3rem;
-      padding: 20px;
-  }
-  .nav div.media_button {
-      display: block;
+    text-align: center;
+    width: 100%;
+    font-size: 3rem;
+    padding: 20px;
   }
 }
 
 
-/*--- CSS for nedtrekkslsten ---*/
+/*------ CSS for hamburgermeny "knapp" ------*/
 .navTrigger {
   cursor: pointer;
   width: 30px;
@@ -143,44 +139,11 @@ body {
   height: 4px;
 }
 
-.navTrigger i:nth-child(1) {
-  -webkit-animation: outT 0.8s backwards;
-  animation: outT 0.8s backwards;
-  -webkit-animation-direction: reverse;
-  animation-direction: reverse;
+.navTrigger i:nth-child(2) { 
+  margin: 5px 0; /* Setter maring på de midterste linjen*/
 }
 
-.navTrigger i:nth-child(2) {
-  margin: 5px 0;
-  -webkit-animation: outM 0.8s backwards;
-  animation: outM 0.8s backwards;
-  -webkit-animation-direction: reverse;
-  animation-direction: reverse;
-}
-
-.navTrigger i:nth-child(3) {
-  -webkit-animation: outBtm 0.8s backwards;
-  animation: outBtm 0.8s backwards;
-  -webkit-animation-direction: reverse;
-  animation-direction: reverse;
-}
-
-.navTrigger.active i:nth-child(1) {
-  -webkit-animation: inT 0.8s forwards;
-  animation: inT 0.8s forwards;
-}
-
-.navTrigger.active i:nth-child(2) {
-  -webkit-animation: inM 0.8s forwards;
-  animation: inM 0.8s forwards;
-}
-
-.navTrigger.active i:nth-child(3) {
-  -webkit-animation: inBtm 0.8s forwards;
-  animation: inBtm 0.8s forwards;
-}
-
-/* CSS for nav som blir gyldig når du scroller langt nok ned på siden */
+/* CSS for nav som blir lagt til når du scroller langt nok ned på siden */
 .affix {
   padding: 0;
   background-color: #fff;

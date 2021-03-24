@@ -24,26 +24,6 @@ var fylke11 = document.getElementById("Rogaland");
 var knapp = document.getElementById("knapp");
 var mapdiv = document.getElementsByClassName("mapdiv");
 
-// Navbar
-$('.navTrigger').click(function () {
-    $(this).toggleClass('active');
-    console.log("Clicked menu");
-    $("#mainListDiv").toggleClass("show_list");
-    $("#mainListDiv").fadeIn();
-
-});
-
-// Funksjon for å endre utseende på navbar når du scroller nedover siden 
-$(window).scroll(function() {
-    if ($(document).scrollTop() > 50) {
-        $('.nav').addClass('affix');
-        console.log("OK");
-    } else {
-        $('.nav').removeClass('affix');
-    }
-});
-
-
 // Objekter med byinfo
 var fylkesinfo = [
     //TromsOgFinnmark
