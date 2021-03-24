@@ -5,7 +5,9 @@
 		<title>Chat</title>
 		
 	</head>
+	<!--Linket til Css stilark "chat", denne gjelder kun for chat siden-->
     <link rel="stylesheet" href="chat.css">
+	<!--Linket til Css stilark "style", denne gjelder for hele nettstedet-->
 	<link rel="stylesheet" href="style.css">
 	<body>
 
@@ -33,11 +35,12 @@
         </header>
 
 		<main>
-			<h1>Snakk med en lege</h1>
+			<div id="overskrift">
+				<h1>Snakk med en lege</h1>
+			</div>
+
 			<div id="chatBox">
-			
-				<article id="txtMeldinger"></article>
-						
+				<article id="txtMeldinger"></article>					
 			</div>
 
 			<div id="inpDiv">
@@ -47,6 +50,13 @@
 					<input class="inputMld" type="text" id="inpAvsender" required placeholder="Hvem er du?">
 				</form>	
 			</div>	
+
+			<div id="h2Holder">
+				<h3>Kjente symptomer på Covid-19</h3>
+			</div>
+			<!-- Brukes som en placeholder for animationen, bakgrunnen byttes-->
+			<div class="slider"></div>
+
 		</main>
 
 		<!-- The core Firebase JS SDK is always required and must be listed first -->
@@ -63,7 +73,5 @@
 
 		<!-- Script for chat -->
 		<script src="chat.js"></script>
-				
-	
 	</body>
 </html>
