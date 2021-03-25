@@ -1,0 +1,272 @@
+  
+    :root {
+        --main-radius: 5px;
+        --main-padding: 5px;
+      }
+      
+      body {
+        width: 100%;
+        background-image: url(verdenskart5_40_60p.png);
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-position: top;
+      }
+      
+      table{
+        border-collapse: collapse;      
+      }
+      
+      td{
+        border: 3px solid black;
+        padding:0px 100px;
+      }
+      
+      th{
+        border: 3px solid black;
+        font-size: 16px;
+        padding:0px 100px;
+      }
+      
+      #tdm{
+        color: red;
+      }
+      #tda{
+        color: blue;
+      }
+      #tdp{
+        color: green;
+      }
+      
+      #dose1 img{
+            height: 250px;
+            width: 250px;
+            position: center;
+      }
+      
+      #dose1 img:hover{
+          transition: 3s;
+          z-index: 100;
+          position: center;
+          height: 500px;
+          width: 500px;
+      }
+      
+      #dose2 img{
+            height: 250px;
+            width: 250px;
+            position: center;
+      }
+      
+      #dose2 img:hover{
+          transition: 3s;
+          z-index: 100;
+          position: center;
+          height: 500px;
+          width: 500px;
+      }
+      
+      
+            
+      
+      
+      
+      
+      
+      .grid-con {
+        display: grid;
+        width: 90vw;
+        height: 100vh;
+        margin: 0 auto;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-rows: 0.2fr 1.5fr 1.2fr 0.8fr;
+        grid-template-areas:
+          "top top top top"
+          "sidebar main main main"
+          "sidebar content1 content2 content3"
+          "footer footer footer footer";
+        grid-gap: 0.2rem;
+        font-weight: 800;
+        text-transform: uppercase;
+      }
+      
+      
+      
+      main {
+      
+        grid-area: main;
+        margin: 0 auto;
+        border-radius: var(--main-radius);
+        padding-top: var(--main-padding);
+      
+       
+      }
+      
+      table{
+        text-align: center;
+        margin: 0;
+      }
+      
+      #sidebar {
+      
+        grid-area: sidebar;
+        border-radius: var(--main-radius);
+        padding-top: var(--main-padding);
+        text-align: center;
+      }
+      
+      #g1 {
+        grid-area: content1;
+        border-radius: var(--main-radius);
+        padding-top: var(--main-padding);
+        text-align: center;
+      }
+      
+      #g2 {
+      
+        grid-area: content2;
+        border-radius: var(--main-radius);
+        padding-top: var(--main-padding);
+        text-align: center;
+      }
+      
+      #g3 {
+      
+        grid-area: content3;
+        border-radius: var(--main-radius);
+        padding-top: var(--main-padding);
+      
+      }
+      
+      footer {
+        background: #5E6973;
+        grid-area: footer;
+        border-radius: var(--main-radius);
+        padding-top: var(--main-padding);
+        padding:10px;
+        font-size: 16px;
+        text-align: center;
+        color: white;
+      }
+      
+      
+      
+      @media only screen and (max-width: 550px) {
+        .container {
+          grid-template-columns: 1fr;
+          grid-template-rows: 0.4fr 0.4fr 2.2fr 1.2fr 1.2fr 1.2fr 1fr;
+          grid-template-areas:
+            "top"
+            "sidebar"
+            "main"
+            "content1"
+            "content2"
+            "content3"
+            "footer";
+        }
+      }
+      
+      /*Blide sliden */
+      
+            #bildeslide img {
+              position: absolute;
+              height: 250px;
+              width: 320px;
+         
+              
+      
+            }
+            .bilde1 {
+              animation-name: a;
+              animation-timing-function: ease-in-out;
+              animation-iteration-count: infinite;
+              animation-duration: 9s;
+              animation-direction: alternate;
+            }
+      
+            .bilde2 {
+              animation-name: b;
+              animation-timing-function: ease-in-out;
+              animation-iteration-count: infinite;
+              animation-duration: 9s;
+              animation-direction: alternate;
+            }
+      
+            .bilde3 {
+              animation-name: c;
+              animation-timing-function: ease-in-out;
+              animation-iteration-count: infinite;
+              animation-duration: 9s;
+              animation-direction: alternate;
+            }
+      
+            }
+            @keyframes a {
+              0% {
+                opacity: 1;
+              }
+              50% {
+                opacity: 0;
+              }
+              100% {
+                opacity: 0;
+              }
+            }
+      
+                 @keyframes b {
+              0% {
+                opacity: 0;
+              }
+              50% {
+                opacity: 1;
+              }
+              100% {
+                opacity: 0;
+              }
+            }
+                  @keyframes c {
+              0% {
+                opacity: 0;
+              }
+              50% {
+                opacity: 0;
+              }
+              100% {
+                opacity: 1;
+              }
+            }
+      
+      
+      
+            /*Listen*/
+      
+            ul {
+        list-style: none; /* Remove default bullets */
+      }
+      
+      ul #li1::before {
+        content: "\2022";  /* Add content: \2022 is the CSS Code/unicode for a bullet */
+        color: red; /* Change the color */
+        font-weight: bold; /* If you want it to be bold */
+        display: inline-block; /* Needed to add space between the bullet and the text */
+        width: 1em; /* Also needed for space (tweak if needed) */
+        margin-left: -1em; /* Also needed for space (tweak if needed) */
+      }
+      ul #li2::before {
+        content: "\2022";  
+        color: blue; 
+        font-weight: bold; 
+        display: inline-block; 
+        width: 1em; 
+        margin-left: -1em; 
+      }
+      ul #li3::before {
+        content: "\2022";  
+        color: green; 
+        font-weight: bold; 
+        display: inline-block; 
+        width: 1em; 
+        margin-left: -1em; 
+      }
+      
+      
+      

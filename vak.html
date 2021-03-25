@@ -1,472 +1,10 @@
 <!DOCTYPE html>
 <html>
   <head>
-  <link href="https://fonts.googleapis.com/css?family=Inter:400,800,900&display=swap" rel="stylesheet">
-  <style type="text/css">
-    
-    :root {
-  --main-radius: 5px;
-  --main-padding: 5px;
-}
-
-body {
-  width: 100%;
-  background-image: url(verdenskart5_40_60p.png);
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-position: top;
-}
-
-table{
-  border-collapse: collapse;      
-}
-
-td{
-  border: 3px solid black;
-  padding:0px 100px;
-}
-
-th{
-  border: 3px solid black;
-  font-size: 16px;
-  padding:0px 100px;
-}
-
-#tdm{
-  color: red;
-}
-#tda{
-  color: blue;
-}
-#tdp{
-  color: green;
-}
-
-#dose1 img{
-      height: 250px;
-      width: 250px;
-      position: center;
-}
-
-#dose1 img:hover{
-    transition: 3s;
-    z-index: 100;
-    position: center;
-    height: 500px;
-    width: 500px;
-}
-
-#dose2 img{
-      height: 250px;
-      width: 250px;
-      position: center;
-}
-
-#dose2 img:hover{
-    transition: 3s;
-    z-index: 100;
-    position: center;
-    height: 500px;
-    width: 500px;
-}
-
-
-      
-
-
-
-
-
-.grid-con {
-  display: grid;
-  width: 90vw;
-  height: 100vh;
-  margin: 0 auto;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-  grid-template-rows: 0.2fr 1.5fr 1.2fr 0.8fr;
-  grid-template-areas:
-    "top top top top"
-    "sidebar main main main"
-    "sidebar content1 content2 content3"
-    "footer footer footer footer";
-  grid-gap: 0.2rem;
-  font-weight: 800;
-  text-transform: uppercase;
-}
-
-
-
-main {
-
-  grid-area: main;
-  margin: 0 auto;
-  border-radius: var(--main-radius);
-  padding-top: var(--main-padding);
-
- 
-}
-
-table{
-  text-align: center;
-  margin: 0;
-}
-
-#sidebar {
-
-  grid-area: sidebar;
-  border-radius: var(--main-radius);
-  padding-top: var(--main-padding);
-  text-align: center;
-}
-
-#g1 {
-  grid-area: content1;
-  border-radius: var(--main-radius);
-  padding-top: var(--main-padding);
-  text-align: center;
-}
-
-#g2 {
-
-  grid-area: content2;
-  border-radius: var(--main-radius);
-  padding-top: var(--main-padding);
-  text-align: center;
-}
-
-#g3 {
-
-  grid-area: content3;
-  border-radius: var(--main-radius);
-  padding-top: var(--main-padding);
-
-}
-
-footer {
-  background: #5E6973;
-  grid-area: footer;
-  border-radius: var(--main-radius);
-  padding-top: var(--main-padding);
-  padding:10px;
-  font-size: 16px;
-  text-align: center;
-  color: white;
-}
-
-
-
-@media only screen and (max-width: 550px) {
-  .container {
-    grid-template-columns: 1fr;
-    grid-template-rows: 0.4fr 0.4fr 2.2fr 1.2fr 1.2fr 1.2fr 1fr;
-    grid-template-areas:
-      "top"
-      "sidebar"
-      "main"
-      "content1"
-      "content2"
-      "content3"
-      "footer";
-  }
-}
-
-/*Blide sliden */
-
-      #bildeslide img {
-        position: absolute;
-        height: 250px;
-        width: 320px;
-   
-        
-
-      }
-      .bilde1 {
-        animation-name: a;
-        animation-timing-function: ease-in-out;
-        animation-iteration-count: infinite;
-        animation-duration: 9s;
-        animation-direction: alternate;
-      }
-
-      .bilde2 {
-        animation-name: b;
-        animation-timing-function: ease-in-out;
-        animation-iteration-count: infinite;
-        animation-duration: 9s;
-        animation-direction: alternate;
-      }
-
-      .bilde3 {
-        animation-name: c;
-        animation-timing-function: ease-in-out;
-        animation-iteration-count: infinite;
-        animation-duration: 9s;
-        animation-direction: alternate;
-      }
-
-      }
-      @keyframes a {
-        0% {
-          opacity: 1;
-        }
-        50% {
-          opacity: 0;
-        }
-        100% {
-          opacity: 0;
-        }
-      }
-
-           @keyframes b {
-        0% {
-          opacity: 0;
-        }
-        50% {
-          opacity: 1;
-        }
-        100% {
-          opacity: 0;
-        }
-      }
-            @keyframes c {
-        0% {
-          opacity: 0;
-        }
-        50% {
-          opacity: 0;
-        }
-        100% {
-          opacity: 1;
-        }
-      }
-
-
-
-      /*Listen*/
-
-      ul {
-  list-style: none; /* Remove default bullets */
-}
-
-ul #li1::before {
-  content: "\2022";  /* Add content: \2022 is the CSS Code/unicode for a bullet */
-  color: red; /* Change the color */
-  font-weight: bold; /* If you want it to be bold */
-  display: inline-block; /* Needed to add space between the bullet and the text */
-  width: 1em; /* Also needed for space (tweak if needed) */
-  margin-left: -1em; /* Also needed for space (tweak if needed) */
-}
-ul #li2::before {
-  content: "\2022";  
-  color: blue; 
-  font-weight: bold; 
-  display: inline-block; 
-  width: 1em; 
-  margin-left: -1em; 
-}
-ul #li3::before {
-  content: "\2022";  
-  color: green; 
-  font-weight: bold; 
-  display: inline-block; 
-  width: 1em; 
-  margin-left: -1em; 
-}
-
-
-
-/*------------------------------ CSS for navbar ---------------------------------------------------------*/
-
-.nav {
-  width: 100%;
-  height: 10vh;
-  position: fixed;
-  line-height: 65px;
-  text-align: center;
-  background-color: white;
-  z-index: 9999; /*Gjør at nav ikke havner bak annet innhold på siden*/
-}
-
-.nav div.logo {
-  float: left;
-  width: auto;
-  height: auto;
-  padding-left: 3rem;
-}
-
-.nav div.logo a {
-  text-decoration: none;
-  color: #111;
-  font-size: 2.5rem;
-}
-
-.nav div.logo a:hover {
-  color:turquoise;
-}
-
-.nav div.main_list {
-  height: 65px;
-  float: right;
-}
-
-.nav div.main_list ul {
-  width: 100%;
-  height: 65px;
-  display: flex;
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-
-.nav div.main_list ul li {
-  width: auto;
-  height: 65px;
-  padding: 0;
-  padding-right: 3rem;
-}
-
-.nav div.main_list ul li a {
-  text-decoration: none;
-  color: #111;
-  line-height: 65px;
-  font-size: 2.4rem;
-}
-
-.nav div.main_list ul li a:hover {
-  color: turquoise;
-}
-
-
-/* Home section */
-.navTrigger {
-  display: none;
-}
-
-.nav {
-  padding-top: 20px;
-  padding-bottom: 20px;
-  -webkit-transition: all 0.4s ease;
-  transition: all 0.4s ease;
-}
-
-
-/* Endrer nav når gjør skjermen liten */
-
-@media screen and (min-width: 1000px) and (max-width: 1024px) {
-  .container {
-      margin: 0;
-  }
-}
-
-@media screen and (max-width:1000px) {
-  .navTrigger {
-      display: block;
-  }
-  .nav div.logo {
-      margin-left: 15px;
-  }
-  .nav div.main_list {
-      width: 100%;
-      height: 0;
-      overflow: hidden;
-  }
-  .nav div.show_list {
-      height: auto;
-      display: none;
-  }
-  .nav div.main_list ul {
-      flex-direction: column;
-      width: 100%;
-      height: 100vh;
-      right: 0;
-      left: 0;
-      bottom: 0;
-      background-color: #fff;
-      background-position: center top;
-  }
-  .nav div.main_list ul li {
-      width: 100%;
-      text-align: right;
-  }
-  .nav div.main_list ul li a {
-      text-align: center;
-      width: 100%;
-      font-size: 3rem;
-      padding: 20px;
-  }
-  .nav div.media_button {
-      display: block;
-  }
-}
-
-
-/* Animasjon */
-.navTrigger {
-  cursor: pointer;
-  width: 30px;
-  height: 25px;
-  margin: auto;
-  position: absolute;
-  right: 30px;
-  top: 0;
-  bottom: 0;
-}
-
-.navTrigger i {
-  background-color: #111;
-  border-radius: 2px;
-  content: '';
-  display: block;
-  width: 100%;
-  height: 4px;
-}
-
-.navTrigger i:nth-child(1) {
-  -webkit-animation: outT 0.8s backwards;
-  animation: outT 0.8s backwards;
-  -webkit-animation-direction: reverse;
-  animation-direction: reverse;
-}
-
-.navTrigger i:nth-child(2) {
-  margin: 5px 0;
-  -webkit-animation: outM 0.8s backwards;
-  animation: outM 0.8s backwards;
-  -webkit-animation-direction: reverse;
-  animation-direction: reverse;
-}
-
-.navTrigger i:nth-child(3) {
-  -webkit-animation: outBtm 0.8s backwards;
-  animation: outBtm 0.8s backwards;
-  -webkit-animation-direction: reverse;
-  animation-direction: reverse;
-}
-
-.navTrigger.active i:nth-child(1) {
-  -webkit-animation: inT 0.8s forwards;
-  animation: inT 0.8s forwards;
-}
-
-.navTrigger.active i:nth-child(2) {
-  -webkit-animation: inM 0.8s forwards;
-  animation: inM 0.8s forwards;
-}
-
-.navTrigger.active i:nth-child(3) {
-  -webkit-animation: inBtm 0.8s forwards;
-  animation: inBtm 0.8s forwards;
-}
-
-.affix {
-  padding: 0;
-  background-color: #fff;
-  border: double #111;
-}
-
-
-
-  </style>
+	<!--Linket til Css stilark "vak", denne gjelder kun for chat siden-->
+  <link rel="stylesheet" href="vak.css">
+	<!--Linket til Css stilark "style", denne gjelder for hele nettstedet-->
+	<link rel="stylesheet" href="style.css">
 
 </head>
 
@@ -478,9 +16,9 @@ ul #li3::before {
                         <a href="index.html">CORONAVIRUSET</a>
                     </div>
                     <div id="mainListDiv" class="main_list">
-                        <ul class="navlinks">
+                        <ul>
                             <li><a href="chat.html">Chat</a></li>
-                            <li><a href="#">Vaksinesiden</a></li>
+                            <li><a href="vak.html">Vaksinesiden</a></li>
                             <li><a href="tidslinje.html">Tidslinje</a></li>
                         </ul>
                     </div>
@@ -520,7 +58,7 @@ ul #li3::before {
           <tr>  
             <td id="tda"><h4>AstraZeneca</h4></td>
         
-            <td id="tdsj">179 200 doser brukt</td>
+            <td>179 200 doser brukt</td>
           </tr>
           <tr>  
             <td id="tdp"><h4>Pfizer</h4></td>
@@ -543,18 +81,18 @@ ul #li3::before {
   </div>
   <div id="g1">
     Kart over første dose:
-    <div id="dose1"><img src="dose1.png"></div>
+    <div id="dose1"><img src="bilder/dose1.png"></div>
   </div>
   <div id="g2">
     Kart over andre dose:
-    <div id="dose2"><img src="dose2.png"></div>
+    <div id="dose2"><img src="bilder/dose2.png"></div>
   </div>
   <div id="g3">
     <br>
         <div id="bildeslide">
-          <img class="bilde1" src="pfizer.jpg">
-          <img class="bilde2" src="astra.jpg">
-          <img class="bilde3" src="moderna.jpg">
+          <img class="bilde1" src="bilder/pfizer.jpg">
+          <img class="bilde2" src="bilder/astra.jpg">
+          <img class="bilde3" src="bilder/moderna.jpg">
         </div> 
   </div>
   <footer>
@@ -612,29 +150,11 @@ ul #li3::before {
       ctx.fillStyle="green"
       ctx.fillRect(170, yverdi3, 30, verdi3);
 
-                  // Navbar
-      $('.navTrigger').click(function(){
-          $(this).toggleClass('active');
-          console.log("Clicked menu");
-          $("#mainListDiv").toggleClass("show_list");
-          $("#mainListDiv").fadeIn();
-
-      });
-
-      // Funksjon for å endre utseende på navbar når du scroller nedover siden 
-      $(window).scroll(function() {
-          if ($(document).scrollTop() > 50) {
-              $('.nav').addClass('affix');
-              console.log("OK");
-          } else {
-              $('.nav').removeClass('affix');
-          }
-      });
-
-
     
     </script>
-
+      <!----------------------------- Script for navbar ------------------------>
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+      <script src="script.js"></script>
 
   </body>
 </html>
